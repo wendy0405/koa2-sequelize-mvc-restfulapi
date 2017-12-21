@@ -1,8 +1,9 @@
 const User = require('../models/user');
 class UserController {
-  test(data = {}) {
+  async test(data = {}) {
     let user = new User();
-    return user.find({'where':{'user_id':1},'attributes':['user_name']});
+    let rst = await user.find({'where':{'user_id':1},'attributes':['user_name']});
+    return rst.get({plain:true});
   }
 }
 module.exports = UserController;

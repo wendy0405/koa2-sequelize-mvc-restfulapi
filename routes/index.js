@@ -1,9 +1,8 @@
 const router = require('koa-router')()
 const UserController = require('../controller/UserController');
+const User = new UserController();
 router.get('/', async (ctx, next) => {
-  let Users = new UserController();
-  let rst = await Users.test({user_id:ctx.query.user_id});
-  rst = rst.get({plain:true});
+  let rst = await User.test({user_id:ctx.query.user_id});
   ctx.body = rst;
 })
 module.exports = router
