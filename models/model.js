@@ -1,11 +1,12 @@
 /**
  * postgresql 基础模型层
  */
+const conf = require('../conf/conf');
 class BaseModel {
     constructor() {
         let Sequelize = require('sequelize');
         this.Sequelize = Sequelize;
-        this.sequelize = new Sequelize('postgres://postgres:root@localhost:5432/winzdar',{
+        this.sequelize = new Sequelize(conf.postgresql_url,{
             logging: false,
             define:{
                 timestamps:false,
