@@ -1,5 +1,7 @@
 # koa2-sequelize-mvc-restfulapi
 一份基于koa2的mvc/restfull轮子
+# koa2
+express 原班人马打造，真的是轻量级，轻的连手册都很简介嘛，如果不是为了 async/await 我猜我是不会去才这个坑的。express大法好。
 # sequelize
 一份支持多个数据的开源项目，为了测试并使用它才折腾了这东西。
 # postgre mysql
